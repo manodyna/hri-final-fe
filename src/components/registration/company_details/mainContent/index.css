@@ -1,0 +1,168 @@
+
+
+
+.logoCompanyDetails{
+  margin: 0px auto auto auto;
+  height: 51px;
+  width: 50px;
+}
+
+.inputFields{
+  justify-content: center;
+}
+
+.inputCenter{
+  display: grid;
+  place-items: center;
+}
+
+.marginDescBox{
+  width: 41.25rem;
+  height: 7rem;
+  text-align: justify;
+  overflow-wrap: break-word;
+  resize: None;
+  overflow: hidden;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.marginTextBox{
+  margin-left: 10px;
+  width: 50rem;
+}
+
+.invisible-border {
+  border: none; 
+  outline: none; 
+}
+
+.inputGroup{
+  margin-left: 2.25rem!important;
+}
+
+.subHeadingTextBox{
+  font-size: 16px;
+  font-weight: 400;
+  color: #667084;
+}
+
+.onlyRightBorder{
+  border-left: none;
+  border-top: none;
+  border-left: none;
+}
+
+
+.companyDescBOx{
+  align-items: flex-start;
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: center;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  margin-top: 10px;
+}
+
+.button1{
+  width: 22.375rem;
+  height: 2.75rem;
+  padding: 0.813rem 9rem 0.75rem 9.063rem;
+  border-radius: 8px;
+  background-color: #FF3279;
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.button1:hover{
+  background: #FF3279;
+}
+
+.continue{
+  margin-top: 2rem!important;
+}
+
+.checkbox{
+  margin-left: auto!important;
+  margin-right: auto!important;
+}
+
+.network-error-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.network-error-popup.visible {
+  display: flex;
+}
+
+.network-error-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.network-error-content h2 {
+  font-size: 24px;
+}
+
+.network-error-content p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.network-error-content button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.network-error-content button:hover {
+  background: #0056b3;
+}
+
+
+.uploader{
+  width: 42.25rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center
+
+}
+
+
+.textUploader {
+  color: #1d4ede;
+  font: var(--textsm-semibold, 600 14px/20px 'Inter', sans-serif);
+  margin: auto auto auto auto;
+  }
+
+.e-error {
+  color: red !important; /* Error message color */
+  display: block !important; /* Ensure it appears on a new line */
+  font-size: 0.75em !important; /* Adjust font size as needed */
+  margin-top: 4px !important; /* Add a little bit of space above it */
+}
+

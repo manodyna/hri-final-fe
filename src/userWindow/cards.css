@@ -1,0 +1,167 @@
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Creates space between cards */
+    padding: 20px;
+    align-items: center; /* Center cards horizontally */
+    width: 100%; /* Full width */
+    max-width: 800px; /* Maximum width of container */
+    margin: 40px auto; /* Vertical space and centering in the viewport */
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 80%; /* 80% of the .cards-container width */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    color: #ce706d;
+    margin: 0 0 10px 0; /* Spacing below the title */
+    cursor: pointer;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 20px 0; /* Spacing below the description */
+}
+
+.card-action {
+    padding: 10px 20px;
+    width: 40%;
+    background-color: #2b2b2b;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card-action:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* If using a <Link> component from react-router-dom */
+.card-title, .card-action {
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 0 15px; /* Adjust padding as needed */
+    width: 100%;
+    /* If you have other elements like a logo or title, you might want to add justify-content: space-between; */
+}
+
+.navbar-buttons {
+    display: flex;
+    gap: 50px; /* Adds space between buttons */
+}
+
+
+
+.card {
+    display: flex;
+    border: none;
+    height: 18rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%; /* Full width of its container */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s;
+}
+
+.card-image-container {
+    width: 40%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px 0 0 8px; /* Rounded corners on the left side */
+}
+
+.card-content {
+    width: 60%;
+    padding-left: 20px; /* Add some padding between the image and the text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    background-color: #fff; /* Or any color that fits your design */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for depth */
+}
+
+.navbar-logo {
+    /* If you want to size your logo */
+    height: 50px; /* Adjust size as needed */
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 100%; /* Adjust if you want to control the size of the logo */
+}
+
+.navbar-buttons {
+    display: flex;
+    gap: 1rem; /* Space between buttons */
+}
+
+.navbar-buttons button,
+.navbar-buttons a {
+    width: 13rem;
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    text-decoration: none;
+    /*color: #FF3379; !* Adjust the color as needed *!*/
+    background-color: #5E8E85;
+    color: #ffffff ;
+}
+
+.reset-password{
+    background-color: #ffffff!important;
+    color: #5E8E85 !important;
+    border: 1px solid #5E8E85 !important;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .card-title{
+        font-size: 1.25rem;
+    }
+}
+
+/* Add any additional hover effects or styles as needed */
+
+/* ... rest of your styles ... */

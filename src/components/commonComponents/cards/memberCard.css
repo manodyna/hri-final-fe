@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .main-box {
+        @apply bg-white  px-7 py-4 border-b-2 border-lightBottomBorder;
+    }
+    .main-box .title {
+        @apply text-[15px] font-medium relative text-[#101217];
+    }
+    .main-box .description {
+        @apply text-[13px] font-medium mt-2 text-textDescription;
+    }
+    .btn-main-box {
+        @apply justify-between flex  flex-wrap items-center mt-4  lg:flex gap-5 flex-row;
+    }
+    .lg-flex {
+        @apply md:flex;
+    }
+    .left-btns {
+        @apply flex gap-3  flex-wrap;
+    }
+    .box-shadow {
+        @apply shadow-[0px_-2px_5px_0px_rgba(10,10,10,0.2)];
+    }
+    .left-card-parent {
+        @apply w-[40%] h-[67vh] overflow-auto;
+    }
+    .right-card-parent {
+        @apply w-[60%] h-[67vh] overflow-auto;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .dashed-border {
+        @apply border-b-2 border-dashed pb-3  border-lightDashedBorder;
+    }
+
+    .e-checkbox-wrapper .e-frame,
+    .e-css.e-checkbox-wrapper .e-frame {
+        border: 0.5px solid;
+    }
+
+    .e-checkbox-wrapper.e-custom .e-frame.e-check,
+    .e-checkbox-wrapper.e-custom .e-checkbox:focus + .e-frame.e-check {
+        background-color: #e7edff;
+        color: blue;
+        border: 0.5px solid blue;
+        border-radius: 4px;
+    }
+    .sideDescription {
+        @apply text-[#687591] text-[12px] font-light;
+    }
+    .box-border-red {
+        @apply border border-solid border-red-400 rounded-md px-5;
+    }
+    .box-border-green {
+        @apply border border-solid border-green-600 rounded-md px-5;
+    }
+    .e-switch-wrapper.e-switch .e-switch-handle.e-switch-active {
+        border-radius: 10px;
+        background-color: white;
+        border: none;
+        height: 18px;
+        width: 19px;
+        transform: translateY(4px) translateX(5px);
+    }
+
+    .e-switch-wrapper.e-switch .e-switch-inner.e-switch-active .e-switch-on {
+        background-color: #e7edff;
+        border-color: #e7edff;
+    }
+    .e-switch-wrapper.e-switch .e-switch-inner.e-switch-active {
+        background-color: #e7edff;
+        border: 1px solid #1d4ede;
+        padding: 9px 20px;
+    }
+
+    .e-switch-wrapper.e-switch .e-switch-handle {
+        border-radius: 10px;
+        background-color: white;
+        border: none;
+        height: 18px;
+        width: 19px;
+        transform: translateY(4px) translateX(2px);
+    }
+    .e-switch-wrapper.e-switch .e-switch-inner,
+    .e-switch-wrapper.e-switch .e-switch-off {
+        background-color: #e7edff;
+        border-color: #e7edff;
+    }
+    .e-switch-wrapper.e-switch .e-switch-inner {
+        background-color: #e7edff;
+        border: 1px solid #1d4ede;
+        padding: 9px 20px;
+    }
+
+    .gender-input {
+        @apply h-[45px] w-[50%];
+    }
+
+    /* @media only screen and (max-width: 600px) {
+    .main-box {
+      @apply bg-black
+  }
+  
+  } */
+}

@@ -1,0 +1,2 @@
+'gmail.com', 'yahoo.com', 'outlook.com', 'aol.com', 'icloud.com', 'protonmail.com', 'zoho.com', 'yandex.com', 'mail.com', 'gmx.com', 'tutanota.com' 'fastmail.com', 'hushmail.com', 'gawab.com', 'inbox.com', 'aim.com', 'fastmail.com', 'tutanota.com', 'pobox.com', 'yandex.ru', 'yandex.mail', 'aol.com', 'gmx.net'
+

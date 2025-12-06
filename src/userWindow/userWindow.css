@@ -1,0 +1,203 @@
+/* Base styles for the container */
+.interview-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 2rem auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Tab navigation styling */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f8f8f8; /* Match the color to your login page header */
+    border-bottom: 1px solid #ddd;
+}
+
+nav li {
+    width: 50%; /* Adjust the width as needed based on the number of tabs */
+    text-align: center;
+    padding: 1rem 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav li:hover {
+    background-color: #e9e9e9; /* Slight hover effect */
+}
+
+nav li.active {
+    background-color: #fff; /* Active tab background */
+    border-bottom: 2px solid #007bff; /* Active tab indicator, match your primary button color */
+}
+
+/* Tab content styling */
+.tab-content {
+    padding: 1rem;
+    background-color: #fff;
+}
+
+/* Tab content messages */
+.message {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: #f1f1f1; /* Light background for messages */
+    border-radius: 4px;
+}
+
+/* Active message */
+.message.user {
+    background-color: #e3f2fd; /* Light blue background for user messages */
+}
+
+/* Textarea styling */
+.message-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+/* Placeholder color */
+.message-input::placeholder {
+    color: #aaa;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+    color: #fff;
+    background-color: #007bff; /* Match your primary button color */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Make sure to match this color scheme with your actual login page */
+
+/* This ensures the height of the entire page is filled */
+.interview-container {
+    display: flex;
+    flex-direction: column;
+    height: 85vh; /* Use viewport height to fill the screen */
+    width: 100%; /* This will make the width fit the screen */
+}
+
+/* This will make the conversation scrollable */
+.conversation {
+    overflow-y: auto; /* Enables scrolling */
+    flex-grow: 1; /* Allows the conversation to fill the space */
+    padding: 16px; /* Adjust padding as needed */
+    margin-bottom: 10px; /* Space between messages and text input */
+}
+
+/* Styling for individual messages */
+.message {
+    background-color: #f1f1f1; /* Example color; change as needed */
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 10px; /* Space between messages */
+}
+
+/* This makes the input fixed at the bottom */
+.message-input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    width: calc(100% - 32px); /* Adjusts for padding */
+    box-sizing: border-box; /* Includes padding and border in the element's width */
+    flex-shrink: 0; /* Prevents the textarea from shrinking */
+}
+
+/* Additional styles to ensure the layout doesn't break */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    background-color: #fff; /* Or any color that fits your design */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for depth */
+}
+
+.navbar-logo {
+    /* If you want to size your logo */
+    height: 50px; /* Adjust size as needed */
+    display: flex;
+    align-items: center;
+}
+
+/* Active tab style */
+.button .active {
+    background-color: #5E8E85; /* Active tab background color */
+    color: #fff; /* Active tab text color */
+}
+
+/* Default button style */
+.button {
+    background-color: #fff !important; /* Inactive tab background color */
+    color: #5E8E85 !important; /* Inactive tab text color */
+    border: 1px solid #5E8E85 !important; /* Border for the button */
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    /* Other styles as needed */
+}
+
+/* Apply specific styles to buttons inside .navbar-buttons */
+.navbar-buttons button {
+    /* Your specific styles for these buttons */
+    width: auto; /* Adjust the width as needed */
+    margin-right: 0.5rem; /* Space between buttons */
+    /* Other styles as needed */
+}
+
+
+/* ... existing styles ... */
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .navbar-buttons {
+        flex-direction: column;
+        width: 100%!important;
+        gap: 5px; /* Adds space between buttons */
+        margin-right: 0; /* If you had margin on the right, remove it for mobile */
+    }
+
+    .navbar-buttons button {
+        width: 100%!important; /* Make button width full container width */
+        margin-right: 0; /* Remove any margin on the right if it exists */
+        margin: 0;
+    }
+
+    /* Adjust navbar logo to center on mobile */
+    .navbar {
+        flex-direction: column; /* Stack logo and button container */
+        padding-top: 1rem; /* Add some space above the logo */
+        margin: 0;
+    }
+
+    .navbar-logo {
+        margin-bottom: 1rem; /* Space between logo and buttons */
+    }
+    .interview-container{
+        height: 63vh !important;
+    }
+}
+
+/* ... other existing styles ... */
+

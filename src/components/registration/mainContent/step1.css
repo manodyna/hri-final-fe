@@ -1,0 +1,73 @@
+.e-checkbox-wrapper .e-label {
+    width: 17rem;
+    height: 1rem;
+    margin: 0 2.438rem 1.5rem 0.438rem;
+    font-family: Inter;
+    font-size: 0.813rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+}
+
+.button1 {
+    width: 22.375rem;
+    height: 2.75rem;
+    padding: 0.813rem 9rem 0.75rem 9.063rem;
+    border-radius: 8px;
+    background-color: #FF3279 !important;
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+}
+
+/* .inputFields{
+    justify-content: center;
+} */
+
+/* .inputGroup{
+    margin-left: 2.25rem!important;
+} */
+
+.continue {
+    margin-top: 4.25rem !important;
+}
+
+.checkbox {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 2.688rem;
+}
+
+#email {
+}
+
+#password {
+}
+
+/*.e-error {*/
+/*    position: absolute;*/
+/*    margin-top: 20px !important; !* Adjust as needed *!*/
+/*    margin-left: 10px;*/
+/*}*/
+
+/*.my-auto{*/
+/*    position: fixed;*/
+/*}*/
+
