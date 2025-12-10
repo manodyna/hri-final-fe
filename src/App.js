@@ -7,12 +7,14 @@ import { ForgotPassword1 } from './components/forgot_password/forgot_password1';
 import { ForgotPassword2 } from './components/forgot_password/forgot_password2';
 import { ForgotPassword } from './components/forgot_password/forgot_password';
 import Login from './components/Login/login';
-import ChatComponent from "./components/chat/chatComponent";
-import InputComponent from "./components/input/inputComponent";
-import TabbedPanel from "./userWindow/userWindow";
+// import ChatComponent from "./components/chat/chatComponent";
+// import InputComponent from "./components/input/inputComponent";
+// import TabbedPanel from "./userWindow/userWindow";
 import Cards from "./userWindow/cards";
 import PersonaChat from "./components/personaChat/personaChat";
 import PersonaChatRAG from "./components/personaChat/personaChatRAG";
+import CompanionAgent from "./userWindow/userWindow";
+import ChatComponent from "./components/human";
 
 function App() {
   const checkAuthToken = () => {
@@ -33,7 +35,8 @@ function App() {
               <Route path='/resetpassword' element={<ForgotPassword2/>}/>
               {/*<Route path="/chat" element={<ChatComponent/>} />*/}
               {/*<Route path="/input" element={<InputComponent/>} />*/}
-              <Route path="/memories" element={<TabbedPanel/>} />
+              <Route path="/memories1" element={<CompanionAgent/>} />
+              <Route path="/memories" element={<ChatComponent/>} />
               {/*<Route path="/memories/add-memory" element={<TabbedPanel />} />*/}
               {/*<Route path="/memories/retrieve-memory" element={<TabbedPanel />} />*/}
               <Route path="/home" element={<Cards/>} />

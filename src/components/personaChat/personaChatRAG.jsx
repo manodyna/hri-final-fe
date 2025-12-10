@@ -12,42 +12,64 @@ const PersonaChatRAG = () => {
         setInputText(event.target.value);
     };
 
-    const sendQueryToCustomAPI = async (userQuery) => {
+    const sendQueryToCustomAPI = async (userInput) => {
         const authToken = localStorage.getItem('AuthToken');
         const userId = localStorage.getItem('UserId');
-        const payload = {
-            userId: userId,
-            personaName: 'William shakespeare', // Set the desired persona name
-            personaDescription: 'William shakespeare is a a famous playwright who has written a ' +
-                'lot of plays like romeo and juliet' +
-                'he speaks in shakespearean english and he uses a lot of poetry and prose' +
-                'he is eloquent in speech', // Set the desired persona description
-            personaPrompt: userQuery
-        };
-        try {
-            const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/personaRAG`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${authToken}`
-                },
-                body: JSON.stringify(payload)
-            });
 
-            if (!response.ok) {
-                // throw new Error(`HTTP error! status: ${response.status}`);
-                alert("Looks like there was an issue creating the persona. Please try again.");
-                return; // You might want to handle errors more gracefully based on your application's requirements
+        try {
+            // 1. UPSERT MEMORY
+            const upsertResponse = await fetch(
+                `${process.env.REACT_APP_BASE_URL}/api/v1/getInput`,
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${authToken}`
+                    },
+                    body: JSON.stringify({
+                        userId: userId,
+                        input: userInput
+                    })
+                }
+            );
+
+            if (!upsertResponse.ok) {
+                alert("Session expired. Login again.");
+                navigate('/login');
+                return null;
             }
 
-            const data = await response.json();
+            // 2. QUERY MEMORY + AI RESPONSE
+            const queryResponse = await fetch(
+                `${process.env.REACT_APP_BASE_URL}/api/v1/query`,
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${authToken}`
+                    },
+                    body: JSON.stringify({
+                        userId: userId,
+                        query: userInput
+                    })
+                }
+            );
 
-            // Return only the message part of the response, or handle it as needed
-            return data.data;
+            if (!queryResponse.ok) {
+                throw new Error("Query failed");
+            }
+
+            const data = await queryResponse.json();
+
+            // THIS MUST BE TEXT
+            return data.message || data.reply || data.answer;
+
         } catch (error) {
-            console.error('Error:', error);
+            console.error("API Error:", error);
+            return "I had trouble recalling that. Try again.";
         }
     };
+
     const handleKeyPress = async (event) => {
         if (event.key === 'Enter' && event.shiftKey) {
             // Insert a line break into the text area

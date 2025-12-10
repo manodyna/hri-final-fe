@@ -80,7 +80,7 @@ export const ForgotPassword2 = () => {
             </div>
         </div>
         <div className="absolute flex flex-row justify-between bottom-4 left-4 right-4">
-            <div className="text-[14px] text-lightestGrey">©Ovii copyright</div>
+            <div className="text-[14px] text-lightestGrey">©Ona copyright</div>
             <div className="flex flex-row items-center">
                 <img
                     className="mt-1.5 mr-2"
@@ -88,7 +88,7 @@ export const ForgotPassword2 = () => {
                     src={mail}
                 />
                 <div className=" mr-2 [font-family:'Inter-Regular',Helvetica] font-normal text-[14px] text-lightestGrey">
-                    <span>help@ovii.ai</span>
+                    <span>he?lp@ovii.ai</span>
                 </div>
             </div>
         </div>

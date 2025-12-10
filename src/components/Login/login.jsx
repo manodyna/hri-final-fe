@@ -140,7 +140,7 @@ const Login = () => {
             <div className="flex flex-col items-center justify-center ">
                 <div className="font-bold text-[20px] ">Welcome back!</div>
                 <div className="text-14px text-gray-500 font-inter mt-4 text-center">
-                    Login to Ovii for romancing the memories of life
+                    Login to Ona, your AI companion
                 </div>
                 <form onSubmit={handleLogin}>
                 <div className="mt-10 ">

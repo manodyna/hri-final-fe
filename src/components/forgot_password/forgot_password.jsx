@@ -132,7 +132,7 @@ export const ForgotPassword = () => {
             {/*    </div>*/}
             {/*</div>*/}
             <div className="absolute bottom-4 left-4 flex flex-row">
-                <span className="footText">help@ovii.ai</span>
+                {/*<span className="footText">help@ovii.ai</span>*/}
             </div>
         </div>
     );

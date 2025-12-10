@@ -1,0 +1,30 @@
+.companion-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.8fr);
+    gap: 24px;
+    padding: 24px;
+    height: calc(100vh - 72px); /* leave room for navbar */
+    box-sizing: border-box;
+}
+
+.companion-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.companion-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.companion-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.companion-subtitle {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 16px;
+}
